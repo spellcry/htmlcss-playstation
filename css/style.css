@@ -27,8 +27,12 @@
     height: 15px;
 }
 
-.main-header .nav-bar .nav-link {
+.main-header .navbar-light .navbar-nav .nav-link {
     color: rgba(0, 0, 0, 1);
+}
+
+.main-header .navbar {
+    border-top: 2px solid var(--pl-grey-light);
 }
 
 /* #endregion Main Header */
@@ -46,4 +50,14 @@
 /* -------------------------------------------------------------------------------- */
 /* ! LG-XXL DEVICE */
 /* -------------------------------------------------------------------------------- */
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+
+    /* #region Main Header */
+
+    .main-header .navbar-light .navbar-nav .nav-link {
+        padding-inline: 0.7rem;
+    }
+
+    /* #endregion Main Header */
+
+}
