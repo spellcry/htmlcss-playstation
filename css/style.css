@@ -87,17 +87,48 @@
 }
 
 /* Hero Gallery List */
-.hero .gallery__list .game {
+.pl-slider .game {
     padding: 2px;
 }
 
-.hero .gallery__list .game.active {
+.pl-slider .game.active {
     border: 2px solid var(--pl-active);
     border-radius: 20px;
 }
 
-.hero .gallery__list .game__img img {
+.pl-slider .game__img img {
     border-radius: 20px;
+}
+
+/* Out Now Gallery List */
+.pl-list {
+    background-color: var(--pl-grey-darker);
+}
+
+.pl-list .title,
+.pl-list .subtitle,
+.pl-list .game-title {
+    font-weight: 700;
+}
+
+.pl-list .title {
+    font-size: 2.25rem;
+    letter-spacing: -2px;
+}
+
+.pl-list .subtitle {
+    font-size: 1.625rem;
+    letter-spacing: -1.5px;
+}
+
+.pl-list .game__img img {
+    border-radius: 20px;
+}
+
+.pl-list .game-title {
+    font-size: 1.0625rem;
+    letter-spacing: -1px;
+    line-height: 23px;
 }
 
 /* #endregion Gallery */
