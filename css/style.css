@@ -1,5 +1,10 @@
 /* #region Variables */
-:root {}
+
+:root {
+    --pl-grey-darker: #1f1f1f;
+    --pl-grey-dark: #363636;
+    --pl-grey-light: #545454;
+}
 
 /* #endregion Variables */
 
@@ -7,6 +12,26 @@
 /* ! XS DEVICE */
 /* -------------------------------------------------------------------------------- */
 
+/* #region Utility */
+
+.pl-btn-dark {
+    background-color: var(--pl-grey-dark);
+    border-radius: 20px;
+}
+
+/* #endregion Utility */
+
+/* #region Main Header */
+
+.bar-logo__img {
+    height: 15px;
+}
+
+.main-header .nav-bar .nav-link {
+    color: rgba(0, 0, 0, 1);
+}
+
+/* #endregion Main Header */
 
 /* -------------------------------------------------------------------------------- */
 /* ! S DEVICE */
