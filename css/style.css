@@ -1,9 +1,10 @@
 /* #region Variables */
-
 :root {
     --pl-grey-darker: #1f1f1f;
     --pl-grey-dark: #363636;
     --pl-grey-light: #545454;
+    --pl-accent: #CD3D0F;
+    --pl-active: #0072CE;
 }
 
 /* #endregion Variables */
@@ -13,7 +14,6 @@
 /* -------------------------------------------------------------------------------- */
 
 /* #region Utility */
-
 .pl-btn-dark {
     background-color: var(--pl-grey-dark);
     border-radius: 20px;
@@ -22,7 +22,6 @@
 /* #endregion Utility */
 
 /* #region Main Header */
-
 .bar-logo__img {
     height: 15px;
 }
@@ -36,6 +35,72 @@
 }
 
 /* #endregion Main Header */
+
+/* #region Gallery */
+.hero .gallery .content-wrapper {
+    background: url(../img/jumbo-bg.png) center center no-repeat;
+}
+
+.out-now .gallery .content-wrapper {
+    background: url(../img/it-takes-two-hero-banner-desktop.jpg) center center no-repeat;
+}
+
+.gallery {
+    background-size: cover;
+}
+
+.gallery .content-wrapper {
+    height: 595px;
+}
+
+.gallery__content {
+    width: 100%;
+    bottom: 50px;
+    left: 0;
+}
+
+.gallery .name {
+    max-width: 55%;
+}
+
+.gallery .title,
+.gallery .text,
+.gallery .btn {
+    font-weight: 700;
+
+}
+
+.gallery .title {
+    font-size: 2.625rem;
+    letter-spacing: -4px;
+}
+
+.gallery .text,
+.gallery .btn {
+    font-size: 1.0625rem;
+    letter-spacing: -1px;
+}
+
+.gallery .btn {
+    border-radius: 20px;
+    background-color: var(--pl-accent);
+}
+
+/* Hero Gallery List */
+.gallery__list .game {
+    padding: 2px;
+}
+
+.gallery__list .game.active {
+    border: 2px solid var(--pl-active);
+    border-radius: 20px;
+}
+
+.gallery__list .game__img img {
+    border-radius: 20px;
+}
+
+/* #endregion Gallery */
 
 /* -------------------------------------------------------------------------------- */
 /* ! S DEVICE */
@@ -53,11 +118,21 @@
 @media (min-width: 992px) {
 
     /* #region Main Header */
-
     .main-header .navbar-light .navbar-nav .nav-link {
         padding-inline: 0.7rem;
     }
 
     /* #endregion Main Header */
+
+    /* #region Gallery */
+    .gallery .name {
+        max-width: 60%;
+    }
+
+    .gallery .content__description {
+        width: calc(100% / 3);
+    }
+
+    /* #endregion Gallery */
 
 }
