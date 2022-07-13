@@ -87,16 +87,16 @@
 }
 
 /* Hero Gallery List */
-.gallery__list .game {
+.hero .gallery__list .game {
     padding: 2px;
 }
 
-.gallery__list .game.active {
+.hero .gallery__list .game.active {
     border: 2px solid var(--pl-active);
     border-radius: 20px;
 }
 
-.gallery__list .game__img img {
+.hero .gallery__list .game__img img {
     border-radius: 20px;
 }
 
