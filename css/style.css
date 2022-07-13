@@ -19,6 +19,13 @@
     border-radius: 20px;
 }
 
+.tm {
+    position: relative;
+    font-size: 0.5em;
+    top: -0.5em;
+    left: 2px;
+}
+
 /* #endregion Utility */
 
 /* #region Main Header */
@@ -132,6 +139,54 @@
 }
 
 /* #endregion Gallery */
+
+/* #region Playfive */
+.playfive .intro,
+.playfive .text {
+    font-weight: 400;
+}
+
+.playfive .intro {
+    font-size: 1rem;
+    letter-spacing: -1px;
+    color: var(--pl-active);
+}
+
+.playfive .title {
+    font-size: 2.625rem;
+    font-weight: 700;
+    letter-spacing: -4px;
+}
+
+.playfive .text {
+    font-size: 1.25rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.playfive .btn {
+    background-color: var(--pl-active);
+    border-radius: 20px;
+}
+
+/* ! Playfive Gallery */
+.playfive__gallery .gallery__item {
+    height: 100%;
+}
+
+.playfive__gallery .active {
+    border-bottom: 2px solid var(--pl-active);
+}
+
+.playfive__gallery .item__img img {
+    max-width: 50%;
+    height: auto;
+}
+
+.playfive__gallery .item__title {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* #endregion Playfive */
 
 /* -------------------------------------------------------------------------------- */
 /* ! S DEVICE */
