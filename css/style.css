@@ -45,18 +45,19 @@
 
 /* #region Gallery */
 .hero .gallery .content-wrapper {
-    background: url(../img/jumbo-bg.png) center center no-repeat;
+    background-image: url(../img/jumbo-bg.png);
 }
 
 .out-now .gallery .content-wrapper {
-    background: url(../img/it-takes-two-hero-banner-desktop.jpg) center center no-repeat;
+    background-image: url(../img/it-takes-two-hero-banner-desktop.jpg);
 }
 
-.gallery {
-    background-size: cover;
-}
+.gallery {}
 
 .gallery .content-wrapper {
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
     height: 595px;
 }
 
