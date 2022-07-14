@@ -3,8 +3,12 @@
     --pl-grey-darker: #1f1f1f;
     --pl-grey-dark: #363636;
     --pl-grey-light: #545454;
+    --pl-grey-lighter: #BEBCBB;
     --pl-accent: #CD3D0F;
     --pl-active: #0072CE;
+    --pl-light: #D9DADC;
+    --pl-lighter: #f5f5f5;
+    --pl-blue-darker: #161C3B;
 }
 
 /* #endregion Variables */
@@ -19,11 +23,14 @@
     border-radius: 20px;
 }
 
-.tm {
+.pl-text-up {
     position: relative;
-    font-size: 0.5em;
-    top: -0.5em;
-    left: 2px;
+    font-size: 0.45em;
+    vertical-align: top;
+}
+
+.pl-text-up--reg {
+    top: 0.5em;
 }
 
 /* #endregion Utility */
@@ -41,6 +48,17 @@
     border-top: 2px solid var(--pl-grey-light);
 }
 
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle::after {
+    border: none;
+    font: var(--fa-font-solid);
+    content: "\f107";
+}
+
 /* #endregion Main Header */
 
 /* #region Gallery */
@@ -51,8 +69,6 @@
 .out-now .gallery .content-wrapper {
     background-image: url(../img/it-takes-two-hero-banner-desktop.jpg);
 }
-
-.gallery {}
 
 .gallery .content-wrapper {
     background-size: cover;
@@ -105,7 +121,7 @@
 }
 
 .pl-slider .game__img img {
-    border-radius: 20px;
+    border-radius: 17px;
 }
 
 /* Out Now Gallery List */
@@ -141,9 +157,11 @@
 
 /* #endregion Gallery */
 
-/* #region Playfive */
+/* #region Playfive - Playfour - Sale */
 .playfive .intro,
-.playfive .text {
+.playfive .text,
+.playfour .text,
+.sale .text {
     font-weight: 400;
 }
 
@@ -153,18 +171,23 @@
     color: var(--pl-active);
 }
 
-.playfive .title {
+.playfive .title,
+.playfour .title,
+.sale .title {
     font-size: 2.625rem;
-    font-weight: 700;
-    letter-spacing: -4px;
+    font-weight: 500;
+    letter-spacing: -2px;
 }
 
-.playfive .text {
+.playfive .text,
+.playfour .text,
+.sale .text {
     font-size: 1.25rem;
     color: rgba(0, 0, 0, 0.5);
 }
 
-.playfive .btn {
+.playfive .btn,
+.playfour .btn {
     background-color: var(--pl-active);
     border-radius: 20px;
 }
@@ -188,6 +211,31 @@
 }
 
 /* #endregion Playfive */
+
+/* #region PS Plus - PS Now */
+.psplus {
+    background-color: var(--pl-grey-lighter);
+}
+
+.psplus__logo img,
+.psnow__logo img {
+    max-width: 60%;
+}
+
+.psplus .btn {
+    color: var(--pl-active);
+    background-color: var(--pl-light);
+}
+
+.psnow .btn {
+    background-color: var(--pl-lighter);
+}
+
+.psnow {
+    background-color: var(--pl-blue-darker);
+}
+
+/* #endregion PlayStation Plus */
 
 /* -------------------------------------------------------------------------------- */
 /* ! S DEVICE */
