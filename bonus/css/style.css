@@ -320,6 +320,14 @@
     letter-spacing: -1.5px;
 }
 
+.pl-list .game {
+    transition: transform 200ms linear;
+}
+
+.pl-list .game:hover {
+    transform: scale(1.03);
+}
+
 .pl-list .game__img img {
     border-radius: 20px;
 }
@@ -383,6 +391,11 @@
 /* ! Playfive Gallery */
 .playfive__gallery .gallery__item {
     height: 100%;
+    transition: transform 200ms linear;
+}
+
+.playfive__gallery .gallery__item:hover {
+    transform: translateY(-10px);
 }
 
 .playfive__gallery .active {
