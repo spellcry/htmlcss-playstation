@@ -432,11 +432,13 @@
     border-color: var(--pl-light)
 }
 
-.psplus .psplus__content div:nth-child(2) img {
+.psplus .psplus__content div:nth-child(2) img,
+.psnow .psnow__content div:nth-child(2) img {
     transition: transform 200ms linear;
 }
 
-.psplus:hover .psplus__content div:nth-child(2) img {
+.psplus:hover .psplus__content div:nth-child(2) img,
+.psnow:hover .psnow__content div:nth-child(2) img {
     transform: scale(1.05);
 }
 
