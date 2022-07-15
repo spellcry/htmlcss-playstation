@@ -54,10 +54,94 @@
     align-items: center;
 }
 
-.dropdown-toggle::after {
+.main-header .dropdown-toggle::after,
+.main-header .navbar-light .navbar-nav .nav-link.show:hover::after {
     border: none;
     font: var(--fa-font-solid);
     content: "\f107";
+    color: var(--pl-grey-lighter);
+}
+
+.main-header .navbar-light .navbar-nav .nav-link:hover,
+.main-header .navbar-light .navbar-nav .nav-link:hover::after,
+.main-header .navbar-light .navbar-nav .nav-link.show {
+    color: var(--pl-active);
+}
+
+.main-header .navbar-light .navbar-nav .nav-link::after {
+    transition: transform 200ms linear;
+    transition: none;
+}
+
+.main-header .navbar-light .navbar-nav .nav-link.show::after {
+    transform: rotate(180deg);
+    transition: transform 200ms linear;
+}
+
+.main-header .dropdown {
+    position: static;
+}
+
+.main-header .navbar-expand-lg .navbar-nav .dropdown-menu {
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 0;
+    border: none;
+    border-radius: 0;
+    padding-block: 0 20px;
+}
+
+.main-header .navbar-expand-lg .navbar-nav .dropdown-menu.show {
+    display: flex;
+    justify-content: center;
+}
+
+.main-header .dropdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 8);
+    padding: 0;
+    font-weight: 500;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.main-header .dropdown-item figure {
+    max-width: 40%;
+}
+
+.main-header .dropdown-item:hover {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+}
+
+.dropdown-submenu {
+    width: 100%;
+    border-top: 1px solid var(--pl-grey-lighter);
+}
+
+.dropdown-submenu__list li {
+    padding-inline: 10px;
+}
+
+.dropdown-submenu__list a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.dropdown-submenu__list a:hover {
+    color: var(--pl-active);
+}
+
+.dropdown-submenu__list i {
+    font-size: 8px;
+    margin-right: 5px;
+    color: var(--pl-active);
 }
 
 /* #endregion Main Header */
