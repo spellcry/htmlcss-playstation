@@ -169,6 +169,83 @@
 
 /* #endregion Main Header */
 
+/* #region Gallery Carousel */
+.hero .gallery .carousel-inner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero .gallery .carousel-indicators {
+    flex-wrap: wrap;
+    margin: -8px -8px;
+    position: static;
+    padding: 24px 12px 48px;
+}
+
+.hero .carousel-indicators [data-bs-target] {
+    width: calc(100% / 2 - 16px);
+    height: auto;
+    padding: 8px 8px;
+    text-indent: inherit;
+    margin-inline: 0;
+    border-block: none;
+}
+
+.hero .carousel-indicators figure,
+.hero .carousel-indicators img {
+    border-radius: 20px;
+}
+
+.hero .carousel-indicators .active figure {
+    position: relative;
+}
+
+.hero .carousel-indicators .active figure::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    border: 2px solid var(--pl-active);
+    border-radius: 25px;
+}
+
+.hero .carousel-indicators li figure {
+    transition: all 200ms linear;
+}
+
+.hero .carousel-indicators li:hover {
+    opacity: 1;
+}
+
+.hero .carousel-indicators li:hover figure {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .50);
+}
+
+.hero .gallery .carousel-item>img {
+    height: 595px;
+    aspect-ratio: 1800/675;
+    object-fit: cover;
+    object-position: top;
+}
+
+.hero .gallery .carousel-item .carousel-caption {
+    z-index: 999;
+}
+
+.hero .gallery .carousel .name {
+    margin-inline: auto;
+}
+
+/* #endregion Gallery Carousel */
+
 /* #region Gallery */
 .hero .gallery .content-wrapper {
     background-image: url(../img/jumbo-bg.png);
@@ -220,20 +297,6 @@
 
 .gallery .btn:not(.main-header .btn)::after {
     border-color: var(--pl-accent);
-}
-
-/* Hero Gallery List */
-.pl-slider .game {
-    padding: 2px;
-}
-
-.pl-slider .game.active {
-    border: 2px solid var(--pl-active);
-    border-radius: 20px;
-}
-
-.pl-slider .game__img img {
-    border-radius: 17px;
 }
 
 /* Out Now Gallery List */
@@ -307,6 +370,14 @@
 .playfive .btn:not(.main-header .btn)::after,
 .playfour .btn:not(.main-header .btn)::after {
     border-color: var(--pl-active);
+}
+
+.sale img {
+    transition: transform 200ms linear;
+}
+
+.sale img:hover {
+    transform: scale(1.03);
 }
 
 /* ! Playfive Gallery */
@@ -400,9 +471,37 @@
 /* #endregion Footer */
 
 /* -------------------------------------------------------------------------------- */
+/* ! SM DEVICE */
+/* -------------------------------------------------------------------------------- */
+@media (min-width: 576px) {
+
+    /* #region Gallery Carousel */
+    .hero .gallery .carousel-indicators {
+        max-width: 540px;
+        margin-inline: auto;
+        padding-inline: 0;
+    }
+
+    .hero .carousel-indicators [data-bs-target] {
+        width: calc(100% / 3 - 16px);
+    }
+
+    /* #enregion Gallery Carousel */
+}
+
+/* -------------------------------------------------------------------------------- */
 /* ! M DEVICE */
 /* -------------------------------------------------------------------------------- */
 @media (min-width: 768px) {
+
+    /* #region Gallery Carousel */
+    .hero .gallery .carousel-indicators {
+        max-width: 720px;
+        margin-inline: auto;
+        padding-inline: 0;
+    }
+
+    /* #enregion Gallery Carousel */
 
     /* #region Socials */
     .socials .row {
@@ -415,7 +514,7 @@
 }
 
 /* -------------------------------------------------------------------------------- */
-/* ! LG-XXL DEVICE */
+/* ! LG DEVICE */
 /* -------------------------------------------------------------------------------- */
 @media (min-width: 992px) {
 
@@ -425,6 +524,19 @@
     }
 
     /* #endregion Main Header */
+
+    /* #region Gallery Carousel */
+    .hero .gallery .carousel-indicators {
+        max-width: 960px;
+        margin-inline: auto;
+        padding-inline: 0;
+    }
+
+    .hero .carousel-indicators [data-bs-target] {
+        width: calc(100% / 6 - 16px);
+    }
+
+    /* #enregion Gallery Carousel */
 
     /* #region Gallery */
     .gallery .name {
@@ -437,4 +549,34 @@
 
     /* #endregion Gallery */
 
+}
+
+/* -------------------------------------------------------------------------------- */
+/* ! XL DEVICE */
+/* -------------------------------------------------------------------------------- */
+@media (min-width: 1200px) {
+
+    /* #region Gallery Carousel */
+    .hero .gallery .carousel-indicators {
+        max-width: 1140px;
+        margin-inline: auto;
+        padding-inline: 0;
+    }
+
+    /* #enregion Gallery Carousel */
+}
+
+/* -------------------------------------------------------------------------------- */
+/* ! XXL DEVICE */
+/* -------------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+
+    /* #region Gallery Carousel */
+    .hero .gallery .carousel-indicators {
+        max-width: 1320px;
+        margin-inline: auto;
+        padding-inline: 0;
+    }
+
+    /* #enregion Gallery Carousel */
 }
