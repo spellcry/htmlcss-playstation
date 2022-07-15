@@ -24,6 +24,14 @@
     border-radius: 20px;
 }
 
+.pl-btn-dark:hover {
+    background-color: var(--pl-grey-light);
+}
+
+.pl-btn-search:hover {
+    color: var(--pl-grey-light);
+}
+
 .pl-text-up {
     position: relative;
     font-size: 0.45em;
