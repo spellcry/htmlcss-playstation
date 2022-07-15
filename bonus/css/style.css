@@ -46,7 +46,7 @@
     position: relative;
 }
 
-.btn:hover::after {
+.btn:hover::after:not(.main-header .btn) {
     content: "";
     position: absolute;
     top: -5px;
