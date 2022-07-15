@@ -46,7 +46,7 @@
     position: relative;
 }
 
-.btn:hover::after:not(.main-header .btn) {
+.btn:not(.main-header .btn):hover::after {
     content: "";
     position: absolute;
     top: -5px;
@@ -218,7 +218,7 @@
     background-color: var(--pl-accent);
 }
 
-.gallery .btn::after {
+.gallery .btn:not(.main-header .btn)::after {
     border-color: var(--pl-accent);
 }
 
@@ -304,8 +304,8 @@
     border-radius: 20px;
 }
 
-.playfive .btn::after,
-.playfour .btn::after {
+.playfive .btn:not(.main-header .btn)::after,
+.playfour .btn:not(.main-header .btn)::after {
     border-color: var(--pl-active);
 }
 
@@ -344,7 +344,7 @@
     background-color: var(--pl-light);
 }
 
-.psplus .btn::after {
+.psplus .btn:not(.main-header .btn)::after {
     border-color: var(--pl-light)
 }
 
@@ -352,7 +352,7 @@
     background-color: var(--pl-lighter);
 }
 
-.psnow .btn::after {
+.psnow .btn:not(.main-header .btn)::after {
     border-color: var(--pl-lighter)
 }
 
